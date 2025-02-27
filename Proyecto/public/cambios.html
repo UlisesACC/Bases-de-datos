@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modificar Mascota</title>
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <h2><strong>Modificar Mascota</strong></h2>
+
+    <label for="idmodificar"><strong>ID de la Mascota:</strong></label>
+    <input type="text" id="idmodificar" required>
+    <button onclick="cargarMascota()">Cargar Datos</button>
+
+    <br><br>
+
+    <div id="formulario-modificacion" style="display: none;">
+        <label for="nombreNuevo"><strong>Nuevo Nombre:</strong></label>
+        <input type="text" id="nombreNuevo"><br><br>
+
+        <label for="razaNueva"><strong>Nueva Raza:</strong></label>
+        <input type="text" id="razaNueva"><br><br>
+
+        <label for="tamanioNuevo"><strong>Nuevo Tamaño:</strong></label>
+        <select id="tamanioNuevo">
+            <option value="pequenio">Pequeño</option>
+            <option value="mediano">Mediano</option>
+            <option value="grande">Grande</option>
+        </select><br><br>
+
+        <label for="generoNuevo"><strong>Nuevo Género:</strong></label>
+        <select id="generoNuevo">
+            <option value="macho">Macho</option>
+            <option value="hembra">Hembra</option>
+        </select><br><br>
+
+        <label for="collarNuevo"><strong>¿Tiene Collar?</strong></label>
+        <select id="collarNuevo">
+            <option value="true">Sí</option>
+            <option value="false">No</option>
+        </select><br><br>
+
+        <label for="descripcionNueva"><strong>Nueva Descripción:</strong></label><br>
+        <textarea id="descripcionNueva" rows="4"></textarea><br><br>
+
+        <label for="chipNuevo"><strong>Nuevo Número de Chip:</strong></label>
+        <input type="text" id="chipNuevo"><br><br>
+
+        <button onclick="modificarMascota()">Guardar Cambios</button>
+    </div>
+
+    <br><br>
+    <button onclick="window.location.href='index.html'">Volver al Registro</button>
+
+</body>
+</html>

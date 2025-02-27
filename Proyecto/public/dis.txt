@@ -1,0 +1,20 @@
+presentacion_2/
+│── server.js              # Servidor en Node.js con PostgreSQL
+│── .env                   # Configuración de PostgreSQL
+│── package.json           # Configuración de Node.js
+│── node_modules/          # Librerías de Node.js (se generan con npm install)
+│── public/                # Carpeta con los archivos estáticos
+│   │── index.html         # Formulario de Altas
+│   │── bajas.html         # Página para eliminar mascotas
+│   │── cambios.html       # Página para modificar mascotas
+│   └── script.js          # Script JS que maneja las peticiones de la API
+
+inicializa la conexion de la base de datos con html
+npm init -y
+
+npm install express pg cors dotenv
+
+node server.js
+
+
+npm install -g nodemon

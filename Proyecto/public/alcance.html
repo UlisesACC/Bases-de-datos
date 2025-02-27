@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alcance del Proyecto y Casos de Uso</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h2 {
+            color: #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        table, th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <h2>3. Alcance del Proyecto</h2>
+
+    <h3>a) Perfiles de usuario en el sistema</h3>
+    <ul>
+        <li><strong>Administrador:</strong> Puede gestionar todas las mascotas registradas y administrar usuarios.</li>
+        <li><strong>Usuario Registrado:</strong> Puede reportar, modificar y eliminar sus propios reportes.</li>
+        <li><strong>Visitante:</strong> Puede consultar las mascotas perdidas o encontradas.</li>
+    </ul>
+
+    <h3>b) Funciones de cada usuario</h3>
+    <table>
+        <tr>
+            <th>Perfil</th>
+            <th>Funciones</th>
+        </tr>
+        <tr>
+            <td><strong>Administrador</strong></td>
+            <td>Gestionar todas las mascotas, consultar historial de reportes y administrar usuarios.</td>
+        </tr>
+        <tr>
+            <td><strong>Usuario Registrado</strong></td>
+            <td>Reportar mascota perdida/encontrada, modificar y eliminar sus propios reportes.</td>
+        </tr>
+        <tr>
+            <td><strong>Visitante</strong></td>
+            <td>Consultar mascotas reportadas sin posibilidad de modificar información.</td>
+        </tr>
+    </table>
+
+    <h3>c) Información que debe contemplar el sistema</h3>
+    <ul>
+        <li><strong>Mascota:</strong> ID, Nombre, Raza, Tamaño, Género, Collar, Descripción, Chip, Foto.</li>
+        <li><strong>Reporte de pérdida:</strong> Fecha, Ubicación, Estado, Ciudad, Calle, Coordenadas GPS.</li>
+        <li><strong>Reporte de hallazgo:</strong> ID de la mascota, Fecha, Ubicación.</li>
+        <li><strong>Usuario (Opcional):</strong> Nombre, Teléfono, CURP, Dirección.</li>
+    </ul>
+
+    <h2>4. Casos de Uso</h2>
+
+    <h3>4.1 Caso de Uso: Registrar una Mascota Perdida</h3>
+    <ul>
+        <li><strong>Actor:</strong> Usuario Registrado</li>
+        <li><strong>Descripción:</strong> El usuario ingresa los datos y los envía.</li>
+        <li><strong>Flujo:</strong></li>
+        <ol>
+            <li>Accede al formulario.</li>
+            <li>Completa los datos.</li>
+            <li>Envía el formulario.</li>
+            <li>El sistema guarda los datos y confirma.</li>
+        </ol>
+        <li><strong>Excepciones:</strong> Si falta un dato obligatorio, se muestra un error.</li>
+    </ul>
+
+    <h3>4.2 Caso de Uso: Consultar Mascotas Reportadas</h3>
+    <ul>
+        <li><strong>Actor:</strong> Visitante o Usuario Registrado</li>
+        <li><strong>Flujo:</strong></li>
+        <ol>
+            <li>Accede a la página de búsqueda.</li>
+            <li>Filtra por nombre, raza, ubicación, etc.</li>
+            <li>El sistema muestra los resultados.</li>
+        </ol>
+    </ul>
+
+    <h3>4.3 Caso de Uso: Modificar Información de una Mascota</h3>
+    <ul>
+        <li><strong>Actor:</strong> Usuario Registrado</li>
+        <li><strong>Flujo:</strong></li>
+        <ol>
+            <li>Ingresa el ID de la mascota en "Cambios".</li>
+            <li>El sistema carga los datos actuales.</li>
+            <li>El usuario edita los campos.</li>
+            <li>Guarda los cambios y el sistema actualiza.</li>
+        </ol>
+    </ul>
+
+    <h3>4.4 Caso de Uso: Eliminar una Mascota Reportada</h3>
+    <ul>
+        <li><strong>Actor:</strong> Usuario Registrado o Administrador</li>
+        <li><strong>Flujo:</strong></li>
+        <ol>
+            <li>Accede a la página de bajas.</li>
+            <li>Ingresa el ID de la mascota.</li>
+            <li>Presiona "Eliminar".</li>
+            <li>El sistema borra el registro y confirma.</li>
+        </ol>
+        <li><strong>Excepciones:</strong> Si la mascota no existe, se muestra un error.</li>
+    </ul>
+
+    <h3>4.5 Caso de Uso: Gestionar Reportes (Administrador)</h3>
+    <ul>
+        <li><strong>Actor:</strong> Administrador</li>
+        <li><strong>Flujo:</strong></li>
+        <ol>
+            <li>Accede al panel de administración.</li>
+            <li>Consulta los reportes.</li>
+            <li>Puede modificar o eliminar cualquier registro.</li>
+        </ol>
+    </ul>
+
+    <br>
+    <button onclick="window.location.href='inicio.html'">Volver al Inicio</button>
+
+</div>
+
+</body>
+</html>

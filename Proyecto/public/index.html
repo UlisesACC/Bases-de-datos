@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Mascota Perdida</title>
+    <link rel="icon" href="resources/Busca_huellita.png">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <img src="resources/Busca_huellita.png" alt="logo del cliente">
+        <h1>Formulario</h1>
+        <h2><strong>Registro de Mascota Perdida</strong></h2>
+    </header>
+    <div id="mensaje"></div> <!-- Mensajes de éxito o error -->
+
+    <form onsubmit="registrarMascota(event)">
+        
+        <label for="idmascota"><strong>ID Mascota:</strong></label>
+        <input type="text" id="idmascota" name="idmascota" required><br><br>
+
+        <label for="ruac"><strong>RUAC:</strong></label>
+        <input type="text" id="ruac" name="ruac"><br><br>
+
+        <label for="nombre"><strong>Nombre:</strong></label>
+        <input type="text" id="nombre" name="nombre" required><br><br>
+
+        <label for="raza"><strong>Raza:</strong></label>
+        <input type="text" id="raza" name="raza"><br><br>
+
+        <label for="tamanio"><strong>ingrese el tamaño:</strong></label>
+        <select id="tamanio" name="tamanio" required>
+            <option value="pequenio">Pequeño</option>
+            <option value="mediano">Mediano</option>
+            <option value="grande">Grande</option>
+        </select><br><br>
+
+        <label for="genero"><strong>Ingrese el genero de la mascota :</strong></label>
+        <select id="genero" name="genero" required>
+            <option value="macho">Macho</option>
+            <option value="hembra">Hembra</option>
+        </select><br><br>
+
+        <label for="collar"><strong>¿La mascota iene Collar?</strong></label>
+        <select id="collar" name="collar">
+            <option value="true">Sí</option>
+            <option value="false">No</option>
+        </select><br><br>
+
+        <label for="descripcion"><strong>Ingrese una breve descripción del animal perdido:</strong></label><br>
+        <textarea id="descripcion" name="descripcion" rows="4"></textarea><br><br>
+
+        <label for="chip"><strong>Número de Chip:</strong></label>
+        <input type="text" id="chip" name="chip"><br><br>
+
+        <button type="submit">Registrar Mascota</button>
+        <button type="button" onclick="window.location.href='bajas.html'">Ir a Bajas</button>
+        <button type="button" onclick="window.location.href='cambios.html'">Ir a Cambios</button>
+
+    </form>
+
+</body>
+</html>
